@@ -2,7 +2,7 @@ CXX = g++
 CXXFLAGS = -Wall
 
 SOURCES = main.cpp
-OBJECTS = $(SOURCES:.cpp = .o)
+OBJECTS = main.o
 EXECUTABLE = main.exe
 
 $(EXECUTABLE): $(OBJECTS)
@@ -11,13 +11,12 @@ $(EXECUTABLE): $(OBJECTS)
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-.PHONY: clean doc all
+.PHONY: clean all
 
 clean:
 	rm $(OBJECTS) $(EXECUTABLE)
 
 doc:
-	doxygen -g
+	doxygen
 
-all:
-	main.exe doc
+all: main.exe doc
