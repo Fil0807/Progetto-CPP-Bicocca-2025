@@ -11,7 +11,7 @@ using namespace std;
 
 
 /**
-	@brief Funtore per verificare se un valore è pari
+	@brief Predicato per verificare se un valore è dispari
 
 	Ritorna true se il valore passato è dispari
 */
@@ -35,7 +35,7 @@ struct times2 {
 
 
 /**
-	@brief Funtore che controlla due stringhe
+	@brief Predicato che controlla due stringhe
 
 	Ritorna true se la stringa passata corrisponde alla stringa locale 'name'
 */
@@ -101,7 +101,7 @@ struct increasePower {
 
 
 /**
-	@brief Funtore controlla un veicolo 
+	@brief Predicato controlla un veicolo 
 
 	Ritorna true se i cv del veicolo ricevuto corrispondono a quelli cercati
 */

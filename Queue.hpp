@@ -1,7 +1,7 @@
 /**
     @file Queue.hpp
     
-    @brief FIle header della classe Queue
+    @brief File header della classe Queue
 
     Contiene definizioni e dichiarazioni relative alla classe Queue
 */
@@ -32,8 +32,8 @@ private:
         Struttura dati sulla quale si basa la coda
     */
     struct Node {
-        T value;  //Valore di tipo T
-        Node* next;  //Puntatore di tipo T
+        T value;  //!<Valore di tipo T
+        Node* next;  //!<Puntatore di tipo T
 
 
         /**
@@ -47,10 +47,10 @@ private:
         Node(const T& v) : value(v), next(nullptr) {}
     };
 
-    Node* front;  //Puntatore di tipo T al primo elemento della coda
-    Node* back;  //Puntatore di tipo T all'ultimo elemento della coda
+    Node* front;  //!<Puntatore di tipo T al primo elemento della coda
+    Node* back;  //!<Puntatore di tipo T all'ultimo elemento della coda
 
-    size_t size;  //numero di elementi della coda
+    size_t size;  //!<numero di elementi della coda
 
 
     /**

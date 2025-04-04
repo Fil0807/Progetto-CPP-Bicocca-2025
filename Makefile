@@ -11,7 +11,7 @@ $(EXECUTABLE): $(OBJECTS)
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-.PHONY: clean all
+.PHONY: clean all doc
 
 clean:
 	rm $(OBJECTS) $(EXECUTABLE)
@@ -20,3 +20,6 @@ doc:
 	doxygen
 
 all: main.exe doc
+
+valgrind: $(EXECUTABLE)
+	valgrind -s --leak-check=full ./main.exe
