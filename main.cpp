@@ -63,8 +63,8 @@ struct stringTo {
 	@brief Struttura dati che rappresenta un veicolo
 */
 struct Veicolo {
-	string marca;
-	int cv;
+	string marca;  //!<Rappresenta la marca del veicolo
+	int cv;  //!<Rappresenta i cavalli del motore del veicolo
 
 	Veicolo() {
 		marca = "";
@@ -121,6 +121,7 @@ struct checkCV {
 void testInteri() {
 	cout << "\n\n\n--- Test Coda<int> ---\nCreo la coda" << endl;
 	Queue<int> q;
+	assert(q.isEmpty());
 
 	cout << "La coda e' vuota? " << (q.isEmpty() ? "si" : "no") << "\n" << endl;
 	cout << "Aggiungo i valori da 1 a 5" << endl;
